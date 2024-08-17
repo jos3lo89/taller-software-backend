@@ -12,3 +12,10 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+
+// model practice
+model Ping {
+  id String @id @default(uuid())
+  return String
+}
