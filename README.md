@@ -17,6 +17,11 @@ npm i # npm install
 docker-compose up -d
 
 # Inicializa prisma ORM
+
+# Sincronizar Prisma con la Base de Datos
+npx prisma db push
+
+#Actualizar el Cliente Prisma
 npx prisma generate
 
 # Inicializa el servidor
