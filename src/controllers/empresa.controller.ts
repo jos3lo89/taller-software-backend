@@ -7,6 +7,7 @@ export interface Company {
   address: string;
 }
 
+// Creando un empresa
 export const create = async (req: Request, res: Response) => {
   try {
     if (!req.file) throw new Error("No found Photo");
