@@ -3,6 +3,7 @@ import cookieParser from "cookie-parser";
 import morgan from "morgan";
 import cors from "cors";
 import authRoutes from "./routes/auth.routes";
+import companyRoutes from "./routes/empresa.routes";
 
 const app = express();
 
@@ -17,7 +18,11 @@ app.use(express.static("public"));
 // routes
 const versionApi = process.env.VERSION_API;
 
+// auth routes
 app.use(versionApi, authRoutes);
+
+// company routes
+app.use(`${versionApi}/company`, companyRoutes);
 
 app.all("/ping", (_, res) => {
   res.status(200).json({ message: ["Pong"] });
