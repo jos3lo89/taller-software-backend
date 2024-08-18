@@ -6,6 +6,7 @@ const envVars = z.object({
   CLIENT_URL: z.string(),
   JWT_SECRET: z.string(),
   VERSION_API: z.string(),
+  NODE_ENV: z.string(),
 });
 
 envVars.parse(process.env);
