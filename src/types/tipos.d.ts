@@ -17,3 +17,11 @@ declare global {
     }
   }
 }
+
+
+export interface Company {
+  name: string;
+  telphone: string;
+  email: string;
+  address: string;
+}
